@@ -14,7 +14,7 @@ pipeline {
         }
         stage ('3. Push Docker Image') {
             steps {
-                withCredentials([string(credentialId: 'dockerhup_user', variable: 'DOCKER_PWD')]) {
+                withCredentials([string(credentialsId: 'dockerhup_user', variable: 'DOCKER_PWD')]) {
                     sh 'echo "$DOCKER_PWD" | docker login -u sriramsrb --password-stdin'
                     sh 'docker push sriramsrb/restaurant5-app:latest'
                 }
