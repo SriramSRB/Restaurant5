@@ -19,7 +19,7 @@ spec:
       containers:
         - name: restaurant5-container 
           image: sriramsrb/restaurant5-app:latest
-          imagePullPolicy: Never
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
 
