@@ -9,7 +9,7 @@ pipeline {
         }
         stage ('2. Build Docker Image') {
             steps {
-                sh 'docker build -t restaurant5-app:latest .'
+                sh 'docker build -t sriramsrb/restaurant5-app:latest .'
             }
         }
         stage ('3. Push Docker Image') {
